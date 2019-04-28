@@ -1,3 +1,4 @@
+source('./get_data.R')
 library(lubridate)
 library(scales)
 library(ggthemes)
@@ -57,7 +58,7 @@ title.grob <- textGrob(
   x = unit(0, "lines"), 
   y = unit(0, "lines"),
   hjust = -0.1, vjust = 0,
-  gp = gpar(fontsize = 16, fontfamily = "Arial Narrow", fontface = "Bold"))
+  gp = gpar(fontsize = 16, fontfamily = "Arial Narrow"))
 
 foot.grob <- textGrob(
   label = "Source: NatCen Social Research
@@ -67,9 +68,11 @@ foot.grob <- textGrob(
   hjust = -0.1, vjust = 0,
   gp = gpar(fontsize = 10, fontfamily = "Arial Narrow"))
 
-p1 <- arrangeGrob(p_brexit, 
+p_brexit_original_copy <- arrangeGrob(p_brexit, 
                   top = title.grob,
                   bottom = foot.grob)
-grid.draw(p1)
+grid.draw(p_brexit_original_copy)
 
+ggsave('original_r.png', p_brexit_original_copy,
+       width = 20, height = 18, units = "cm")
 
