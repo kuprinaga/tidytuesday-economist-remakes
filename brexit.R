@@ -74,5 +74,5 @@ p_brexit_original_copy <- arrangeGrob(p_brexit,
 grid.draw(p_brexit_original_copy)
 
 ggsave('original_r.png', p_brexit_original_copy,
-       width = 20, height = 18, units = "cm")
+       width = 10, height = 9, units = "cm")
 

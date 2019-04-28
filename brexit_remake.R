@@ -38,5 +38,5 @@ p_brexit_remake <- add_sub(p_brexit_remake,
 
 ggdraw(p_brexit_remake)
 ggsave('remade.png', p_brexit_remake,
-       width = 20, height = 15, units = "cm")
+       width = 10, height = 7.5, units = "cm")
  
