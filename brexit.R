@@ -25,7 +25,7 @@ p_brexit <- ggplot(data = brexit,
        aes(x = date_pretty, 
            y = perc, 
            color = response)) +
-  geom_smooth() +
+  geom_smooth(se=F) +
   geom_point(alpha = 0.3) +
   geom_label_repel(data = brexit,
                    aes(label = label_data),
